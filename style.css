@@ -15,7 +15,7 @@ form{
 }
 
 label{
-
+    color: whitesmoke;
     font-weight: bold;
 }
 
@@ -24,6 +24,7 @@ label{
     width: 100%;
     padding: 20px;
     margin-bottom: 15px;
+    background-color: grey;
 }
 
 button{
@@ -33,7 +34,9 @@ button{
 
     border: 1px;
     border-radius: 10px;
+    font-size: 20px;
 
-    background: whitesmoke;
+    background-color: whitesmoke;
+    color: black;
 }
 
