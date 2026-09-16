@@ -20,7 +20,7 @@ label{
 }
 
     input{
-    border-color: black;    
+    border-color: whitesmoke;    
     width: 100%;
     padding: 20px;
     margin-bottom: 15px;
@@ -34,6 +34,6 @@ button{
     border: 1px;
     border-radius: 10px;
 
-    background: black;
+    background: whitesmoke;
 }
 
