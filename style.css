@@ -5,13 +5,13 @@ body{
 }
 
 form{
-    width: 400px;
+    width: 500px;
     background-color: #288d0a;
     
-    padding: 50px;
-    margin: 70px auto;
+    padding: 30px;
+    margin: 100px auto;
     border: 2px solid #0c0c0c;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 label{
