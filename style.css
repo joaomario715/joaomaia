@@ -8,9 +8,9 @@ form{
     width: 40px;
     background-color: #288d0a;
     
-    padding: 20px;
-    margin: 50px auto;
-    border: 1px solid #0c0c0c;
+    padding: 50px;
+    margin: 70px auto;
+    border: 2px solid #0c0c0c;
     border-radius: 10px;
 }
 
@@ -22,6 +22,6 @@ label{
 input{
 
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 20px;
+    margin-bottom: 35px;
 }
