@@ -43,3 +43,25 @@ header{
 .logo span{
     color: #7c5cff;
 }
+
+nav{
+    display: flex;
+    gap: 30px;
+
+}
+
+nav a{
+    color: #b8b8c7;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: #7c5cff;
+}
+
+/* inicio */
+
+.inicio{
+    
+}
