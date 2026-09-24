@@ -248,7 +248,21 @@ section{
 
 /* tecnologia */
 
+.tecnologias{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 25px;
 
+}
+
+.tecnologias span{
+    background-color: #292936;
+    color: #bdbdc9;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+
+}
 
 
 /* contato */
