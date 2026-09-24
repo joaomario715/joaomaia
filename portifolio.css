@@ -118,6 +118,19 @@ nav a:hover{
     transition: 0.3s;
 }
 
+.botao:hover{
+    background-color: #7c5cff;
+    transform: translateY(-3px);
+}
+
+.botao-secundario{
+    background-color: transparent;
+    border: 1px solid #7c5cff;
+    color: #7c5cff;
+}
+
+
+
 
 
 
