@@ -10,7 +10,7 @@
 
 <h2>Verificador de idade</h2>
 
-<form>
+<form method = "post">
     <label>Digite sua idade:</label>
     <input type="number" name = "idade">
     <input type="submit" value = "verificar">
