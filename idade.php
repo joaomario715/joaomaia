@@ -11,13 +11,14 @@
 <h2>Verificador de idade</h2>
 
 <form>
-    Digite sua idade:
+    <label>Digite sua idade:</label>
     <input type="number" name = "idade">
     <input type="submit" value = "verificar">
 </form>
 
 <?php
-$idade = "";
+
+$idade;
 
 if ($idade >= 18) {
     echo "Voce é maior de idade";
