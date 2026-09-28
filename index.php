@@ -114,7 +114,7 @@
                     <div class="numero-projeto">
                         01
                     </div>
-                    <h3>Sistema de cadastro</h3>
+                    <h3>Verificador de idade</h3>
                     <p>
                         Descrição do sistema de cadastro
                     </p>
@@ -123,7 +123,7 @@
                         <span>CSS</span>
                         <!--span>PHP</span-->
                     </div>
-                    <a href="cadastro.html">Ver projetos</a>
+                    <a href="idade.php">Ver projetos</a>
                 </div>
                 <!-- PROJETO 2 -->
                 <div class="card">
