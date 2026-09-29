@@ -11,8 +11,6 @@ body{
     margin: 40px;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 h2{
