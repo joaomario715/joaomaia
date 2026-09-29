@@ -1,3 +1,13 @@
+<?php
+$nome = $_POST["nome"];
+$idade = $_POST["idade"];
+
+if ($idade >= 18) {
+    echo "Voce é maior de idade";
+} else {
+    echo "Voce é menor de idade";
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,21 +20,14 @@
 
 <h2>Verificador de idade</h2>
 
-<form method = "post">
+<form method = "POST">
+    <label>Digite seu nome:</label>
+    <input type="text" class = "nome" id = "nome" name = "nome">
     <label>Digite sua idade:</label>
-    <input type="number" name = "idade">
+    <input type="number" class = "idade" id = "idade" name = "idade">
     <input type="submit" value = "verificar">
 </form>
 
-<?php
 
-$idade;
-
-if ($idade >= 18) {
-    echo "Voce é maior de idade";
-} else {
-    echo "Voce é menor de idade";
-}
-?>
 </body>
 </html>
