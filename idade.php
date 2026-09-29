@@ -26,9 +26,10 @@ if ($idade >= 18) {
     <input type="text" class = "nome" id = "nome" name = "nome">
     <label>Digite sua idade:</label>
     <input type="number" class = "idade" id = "idade" name = "idade">
+    <input type="submit" value = "verificar">
 </form>
 
-<p><?= $resultado ?> </p>
+<p> <?= $resultado ?> </p>
 
 
 </body>
