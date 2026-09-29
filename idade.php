@@ -1,7 +1,7 @@
 <?php
 $nome = $_POST["nome"];
 $idade = $_POST["idade"];
-$resultado;
+$resultado = "";
 
 if ($idade >= 18) {
     $resultado = "Voce é maior de idade";
