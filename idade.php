@@ -18,7 +18,7 @@ if ($idade >= 18) {
     <title>Document</title>
 </head>
 <body>
-
+<a href="index.php">Voltar para Projetos</a>
 <h2>Verificador de idade</h2>
 
 <form method = "POST">
