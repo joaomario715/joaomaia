@@ -81,16 +81,16 @@
                     <div class="numero-projeto">
                         01
                     </div>
-                    <h3>Verificador de idade (GET)</h3>
+                    <h3>Verificador de idade (POST)</h3>
                     <p>
-                        Descrição do sistema de cadastro
+                       
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="idade-get.php">Ver projetos</a>
+                    <a href="idade.php">Ver projetos</a>
                 </div>
                 <!-- PROJETO 1 -->
                 <div class="card">
@@ -99,7 +99,7 @@
                     </div>
                     <h3>Verificador de idade (GET)</h3>
                     <p>
-                        Descrição do sistema de cadastro
+                        
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
