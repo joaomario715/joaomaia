@@ -79,7 +79,7 @@
             <div class="projetos">
                 <div class="card">
                     <div class="numero-projeto">
-                        03
+                        01
                     </div>
                     <h3>Verificador de idade (GET)</h3>
                     <p>
@@ -95,7 +95,7 @@
                 <!-- PROJETO 1 -->
                 <div class="card">
                     <div class="numero-projeto">
-                        01
+                        02
                     </div>
                     <h3>Verificador de idade</h3>
                     <p>
@@ -111,7 +111,7 @@
                 <!-- PROJETO 2 -->
                 <div class="card">
                     <div class="numero-projeto">
-                        01
+                        03
                     </div>
                     <h3>Sistema de cadastro</h3>
                     <p>
@@ -120,7 +120,7 @@
                     <div class="tecnologias">
                         <span>HTML</span>
                         <span>CSS</span>
-                        <!--span>PHP</span-->
+                        <span>PHP</span>
                     </div>
                     <a href="cadastro.html">Ver projetos</a>
                 </div>
