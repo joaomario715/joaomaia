@@ -23,7 +23,7 @@ if ($idade >= 18) {
 <a href="index.php" class = "retorno">Voltar para Projetos</a>
 <h2>Verificador de idade</h2>
 
-<form method = "GET">
+<form method = "post">
     <label>Digite seu nome:</label>
     <input type="text" class = "nome" id = "nome" name = "nome">
     <label>Digite sua idade:</label>
