@@ -1,0 +1,18 @@
+[
+  {
+    "nome": "João",
+    "idade": 23,
+    "altura": 1.87,
+    "notas": {
+        "1 Bimestre":{
+            "prova 1": 10
+        },
+        "2 bimestre":{
+            "prova 1": 10
+        },
+        "3 bimestre":{
+            "prova 1": 9
+        }
+     }
+  }
+]
