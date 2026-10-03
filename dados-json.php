@@ -20,6 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $historia_prova2 = $_POST["historia_prova2"];
     $historia_prova3 = $_POST["historia_prova3"];
 
+    // organiza os dados em um array
+
     $novoAluno = [
         "nome" => $nome,
         "idade" => $idade,
@@ -48,29 +50,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     ];
 
-    echo "<h2>DADOS RECEBIDOS:</H2>";
+    // serve para ler/abri arquivos json
 
-    echo "Nome: " . $nome . "<br>";
-    echo "Idade: " . $idade . "<br><br>";
+    $conteudoJson = file_get_contents(__DIR__ . "/dados/intro.json");
 
-    echo "<strong>Português:</strong><br>";
-    echo "Prova 1: " . $portugues_prova1 . "<br>";
-    echo "Prova 2: " . $portugues_prova2 . "<br>";
-    echo "Prova 3: " . $portugues_prova3 . "<br>";
-    "<br><br>";
+    // serve para converter json para array php
+    // true serve para converter o json em array associativo para php ler
+    $alunos = json_decode($conteudoJson, true);
 
-    echo "<strong>Matemática:</strong><br>";
-    echo "Prova 1: " . $matematica_prova1 . "<br>";
-    echo "Prova 2: " . $matematica_prova2 . "<br>";
-    echo "Prova 3: " . $matematica_prova3 . "<br>";
-    "<br><br>";
+    // adicionar um novo aluno
 
-    echo "<strong>História:</strong><br>";
-    echo "Prova 1: " . $historia_prova1 . "<br>";
-    echo "Prova 2: " . $historia_prova2 . "<br>";
-    echo "Prova 3: " . $historia_prova3 . "<br>";
-    "<br><br>";
+    $alunos[] = $novoAluno;
+
+    // converter array php para json
+
+    $jsonAtualizado = json_encode(
+        $alunos,
+        JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
+    );
+
+    // SALVAR NO ARQUIVO JSON
+
+    file_put_contents(__DIR__ . "/dados/intro.json", $jsonAtualizado);
 }
+
+// leitura dos dados para exibição
+
+// le o arquivo json
+$conteudoJson = file_get_contents(__DIR__ . "/dados/intro.json");
+
+// converte o json para array php
+$alunos = json_decode($conteudoJson, true);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -119,5 +130,63 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <br><br>
     <button type="submit">Enviar</button>
     </form>
+
+    <h1>ALUNOS CADASTRADOS</h1>
+
+    <?php foreach ($alunos as $aluno) { ?>
+        <h2> <?= $aluno["nome"] ?> </h2>
+        <p> Idade: <?= $aluno["idade"] ?> </p>
+
+        <!-- PORTUGUES -->
+         <h2>PORTUGUÊS</h2>
+         <P>Prova 1: <?= $aluno["notas"]["portugues"]["prova1"] ?> </P>
+         <P>Prova 2: <?= $aluno["notas"]["portugues"]["prova2"] ?> </P>
+         <P>Prova 3: <?= $aluno["notas"]["portugues"]["prova3"] ?> </P>
+
+        <!-- MATEMATICA -->
+         <H2>MATEMATICA</H2>
+         <P>Prova 1: <?= $aluno["notas"]["matematica"]["prova1"] ?> </P>
+         <P>Prova 2: <?= $aluno["notas"]["matematica"]["prova2"] ?> </P>
+         <P>Prova 3: <?= $aluno["notas"]["matematica"]["prova3"] ?> </P>
+
+        <!-- HISTORIA -->
+         <H2>HISTORIA</H2>
+         <P>Prova 1: <?= $aluno["notas"]["historia"]["prova1"] ?> </P>
+         <P>Prova 2: <?= $aluno["notas"]["historia"]["prova2"] ?> </P>
+         <P>Prova 3: <?= $aluno["notas"]["historia"]["prova3"] ?> </P>
+
+
+
+    
+    <?php } ?>
+
+
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
