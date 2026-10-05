@@ -88,14 +88,13 @@ $produtos = json_decode($dados, true);
     <h2>PRODUTOS CADASTRADOS</h2>
 
     <?php foreach ($produtos as $produto) { ?>
-        <h2> <?= $produto["nome"] ?> </h2>
         <p> Nome: <?= $produto["nome"] ?> </p>
         <p> Categoria: <?= $produto["categoria"] ?> </p>
         <p> Marca: <?= $produto["marca"] ?> </p>
-        <p> preço: <?= $produto["preco"] ?> </p>
+        <p> preço: R$ <?= $produto["preco"] ?> </p>
         <p> Quantidade: <?= $produto["quantidade"] ?> </p>
-        <p> Fabricante: <?= $produto["fabricante"] ?> </p>
-        <p> País de origem: <?= $produto["pais"] ?> </p>
+        <p> Fabricante: <?= $produto["fabricante"]["nome"] ?> </p>
+        <p> País de origem: <?= $produto["fabricante"]["pais"] ?> </p>
 
         <?php } ?>
 
