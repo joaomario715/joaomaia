@@ -92,7 +92,7 @@
                     </div>
                     <a href="idade.php">Ver projetos</a>
                 </div>
-                <!-- PROJETO 1 -->
+                <!-- PROJETO 2 -->
                 <div class="card">
                     <div class="numero-projeto">
                         02
@@ -108,7 +108,7 @@
                     </div>
                     <a href="idade-get.php">Ver projetos</a>
                 </div>
-                <!-- PROJETO 2 -->
+                <!-- PROJETO 3 -->
                 <div class="card">
                     <div class="numero-projeto">
                         03

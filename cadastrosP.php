@@ -1,7 +1,7 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $arquivo = "/dadosP/dados-produtos.json";
+    $arquivo = __DIR__ . "/dadosP/dados-produtos.json";
 
     $dados =  file_get_contents(__DIR__ . "/dadosP/dados-produtos.json");
 
@@ -30,6 +30,7 @@ $dados = file_get_contents($arquivo);
 $produtos = json_decode($dados, true);
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
