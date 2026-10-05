@@ -124,6 +124,22 @@
                     </div>
                     <a href="dados-json.php">Ver projetos</a>
                 </div>
+                 <!-- PROJETO 4 -->
+                 <div class="card">
+                    <div class="numero-projeto">
+                        02
+                    </div>
+                    <h3>Cadastro PHP JSON</h3>
+                    <p>
+                        
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="cadastros.php">Ver projetos</a>
+                </div>
                 </div>
             </div>
           </section>

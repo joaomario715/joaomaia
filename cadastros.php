@@ -76,6 +76,12 @@ $produtos = json_decode($dados, true);
         <p> Nome: <?= $produto["nome"] ?> </p>
         <p> Categoria: <?= $produto["categoria"] ?> </p>
         <p> Marca: <?= $produto["marca"] ?> </p>
+        <p> preço: <?= $produto["preco"] ?> </p>
+        <p> Quantidade: <?= $produto["quantidade"] ?> </p>
+        <p> Fabricante: <?= $produto["fabricante"] ?> </p>
+        <p> País de origem: <?= $produto["pais"] ?> </p>
+
+        <?php } ?>
 
 </body>
 </html>
