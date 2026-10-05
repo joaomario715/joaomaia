@@ -29,11 +29,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
              ]
         ];
 
+        $dados = file_get_contents($dados);
+
+        $produtos = json_decode($dados, true);
+
         $produtos[] = $produto;
 
-        $json = json_encode($produtos, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+        $dadosAtualizado = json_encode(
+            $produtos,
+            JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
+        );
 
-        file_put_contents ($arquivo, $json);
+        file_put_contents(__DIR__ . "/dadosP/dados-produtos.json", $dadosAtualizado);
+
+
 }
 
 $dados = file_get_contents($arquivo);
