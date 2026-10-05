@@ -3,7 +3,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $arquivo = __DIR__ . "/dadosP/dados-produtos.json";
 
-    $dados =  file_get_contents(__DIR__ . "/dadosP/dados-produtos.json");
+    $dados =  file_get_contents($arquivo);
 
     $produtos = json_decode($dados, true);
 
