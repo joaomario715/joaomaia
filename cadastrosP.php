@@ -2,7 +2,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
    
-    $nome = $_POST["nome"];
+        $nome = $_POST["nome"];
         $categoria = $_POST["categoria"];
         $marca = $_POST["marca"];
         $preco = $_POST["preco"];
@@ -88,7 +88,7 @@ $produtos = json_decode($dados, true);
     <h2>PRODUTOS CADASTRADOS</h2>
 
     <?php foreach ($produtos as $produto) { ?>
-        <p> Nome: <?= $produto["nome"] ?> </p>
+        <h2> Nome: <?= $produto["nome"] ?> </h2>
         <p> Categoria: <?= $produto["categoria"] ?> </p>
         <p> Marca: <?= $produto["marca"] ?> </p>
         <p> preço: R$ <?= $produto["preco"] ?> </p>
