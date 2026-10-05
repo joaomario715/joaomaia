@@ -3,11 +3,21 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $arquivo = __DIR__ . "/dadosP/dados-produtos.json";
 
-    $dados =  file_get_contents($arquivo);
+    $dados =  file_get_contents(__DIR__ . "/dadosP/dados-produtos.json");
 
     $produtos = json_decode($dados, true);
 
-    $produto = [
+    $nome = $_POST["nome"];
+        $categoria = $_POST["categoria"];
+        $marca = $_POST["marca"];
+        $preco = $_POST["preco"];
+        $quantidade = $_POST["quantidade"];
+        $fabricante = [
+            $nome = $_POST["fabricante"],
+            $pais = $_POST["pais"]
+        ];
+
+     $produto = [
         "nome" => $_POST["nome"],
         "categoria" => $_POST["categoria"],
         "marca" => $_POST["marca"],
