@@ -1,12 +1,7 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $arquivo = __DIR__ . "/dadosP/dados-produtos.json";
-
-    $dados =  file_get_contents(__DIR__ . "/dadosP/dados-produtos.json");
-
-    $produtos = json_decode($dados, true);
-
+   
     $nome = $_POST["nome"];
         $categoria = $_POST["categoria"];
         $marca = $_POST["marca"];
@@ -29,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
              ]
         ];
 
-        $dados = file_get_contents($dados);
+        $dados = file_get_contents(__DIR__ . "/dadosP/dados-produtos.json");
 
         $produtos = json_decode($dados, true);
 
@@ -45,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 }
 
-$dados = file_get_contents($arquivo);
+$dados = file_get_contents(__DIR__ . "/dadosP/dados-produtos.json");
 $produtos = json_decode($dados, true);
 
 ?>
