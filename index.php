@@ -127,7 +127,7 @@
                  <!-- PROJETO 4 -->
                  <div class="card">
                     <div class="numero-projeto">
-                        02
+                        04
                     </div>
                     <h3>Cadastro PHP JSON</h3>
                     <p>
@@ -138,7 +138,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="cadastros.php">Ver projetos</a>
+                    <a href="cadastrosP.php">Ver projetos</a>
                 </div>
                 </div>
             </div>
