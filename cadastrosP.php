@@ -11,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $nome = $_POST["fabricante"],
             $pais = $_POST["pais"]
         ];
+        $total = $_POST["preco"*"quantidade"];
 
      $produto = [
         "nome" => $_POST["nome"],
@@ -21,7 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "fabricante" => [
             "nome" => $_POST["fabricante"],
             "pais" => $_POST["pais"]
-             ]
+        ],
+        "total" => $_POST["preco"*"quantidade"]
         ];
 
         $dados = file_get_contents(__DIR__ . "/dadosP/dados-produtos.json");
@@ -98,7 +100,7 @@ $produtos = json_decode($dados, true);
         <p> Quantidade em estoque: <?= $produto["quantidade"] ?> </p>
         <p> Fabricante: <?= $produto["fabricante"]["nome"] ?> </p>
         <p> País de origem: <?= $produto["fabricante"]["pais"] ?> </p>
-        <p>Valor em estoque: <?= $total["total"] ?> </p>
+        <p> Valor em estoque: <?= $total["preco*quantidade"] ?> </p>
 
         <?php } ?>
 
