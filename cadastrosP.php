@@ -99,7 +99,7 @@ $produtos = json_decode($dados, true);
         <p> Quantidade em estoque: <?= $produto["quantidade"] ?> </p>
         <p> Fabricante: <?= $produto["fabricante"]["nome"] ?> </p>
         <p> País de origem: <?= $produto["fabricante"]["pais"] ?> </p>
-        <p> Valor em estoque: <?= $total ?> </p>
+        <p> Valor em estoque: R$ <?= $total ?> </p>
 
         <?php } ?>
 
