@@ -86,7 +86,7 @@ $produtos = json_decode($dados, true);
     </form>
     <hr>
 
-    <h2>PRODUTOS CADASTRADOS</h2>
+    <h2>PRODUTOS CADASTRADOS!</h2>
 
     <?php foreach ($produtos as $produto) { ?>
        
