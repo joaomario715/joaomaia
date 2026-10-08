@@ -47,5 +47,15 @@ $relatorio = chamados("relatorio");
         <option>Financeiro</option>
         <option>T.I.</option>
     </select>
+    <br><br>
+    <h3>Equipamento:</h3>
+    <select name="equipamento">
+        <option>Computador</option>
+        <option>Impressora</option>
+        <option>Rede</option>
+        <option>Sistema</option>
+        <option>Outro</option>
+    </select>
+    <br><br>
 </body>
 </html>
