@@ -140,7 +140,7 @@
                     </div>
                     <a href="cadastrosP.php">Ver projetos</a>
                 </div>
-                <!-- PROJETO 2 -->
+                <!-- PROJETO 5 -->
                 <div class="card">
                     <div class="numero-projeto">
                         05
@@ -155,7 +155,6 @@
                         <span>PHP</span>
                     </div>
                     <a href="helpdesk.php">Ver projetos</a>
-                </div>
                 </div>
             </div>
           </section>
