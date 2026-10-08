@@ -30,6 +30,22 @@ $relatorio = chamados("relatorio");
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>CHAMADOS TECNICOS</h1>
+    <h2>Cadastrar chamados</h2>
+
+    <form method="POST"></form>
+    <input type="hidden" name="acao" value="cadastrar">
+
+    <h3>Nome:</h3>
+    <input type="text" name = "nome" required>
+    <br><br>
+    <h3>setor:</h3>
+    <select name="setor">
+        <option>Produção</option>
+        <option>Administrativo</option>
+        <option>Logística</option>
+        <option>Financeiro</option>
+        <option>T.I.</option>
+    </select>
 </body>
 </html>
