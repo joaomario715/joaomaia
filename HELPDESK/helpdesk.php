@@ -33,7 +33,7 @@ $relatorio = chamados("relatorio");
     <h1>CHAMADOS TECNICOS</h1>
     <h2>Cadastrar chamados</h2>
 
-    <form method="POST"></form>
+    <form method="POST">
     <input type="hidden" name="acao" value="cadastrar">
 
     <h3>Nome:</h3>
@@ -57,5 +57,17 @@ $relatorio = chamados("relatorio");
         <option>Outro</option>
     </select>
     <br><br>
+    <h3>Descrição</h3>
+    <textarea name="descricao" required></textarea>
+    <br><br>
+    <h3>Prioridade</h3>
+    <select>
+    <option>Baixa</option>
+    <option>Média</option>
+    <option>Alta</option>
+    </select>
+    <br><br>
+    <button type = "submmit">Cadastrar</button>
+    </form>
 </body>
 </html>
