@@ -50,16 +50,16 @@ function chamados ($acao, $dados = [], $posicao = 0){
         $andamento = 0;
         $resolvidos = 0;
 
-        foreach($lista as $c){
-            if($c["status"] == "aberto"){
+        foreach($lista as $chamado){
+            if($chamado["status"] == "aberto"){
                 $abertos++;
             }
 
-            if($c["status"] == "em andamento"){
+            if($chamado["status"] == "em andamento"){
                 $andamento++;
             }
 
-            if($c["status"] == "resolvido"){
+            if($chamado["status"] == "resolvido"){
                 $resolvidos++;
             }
         }
