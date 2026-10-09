@@ -95,10 +95,12 @@ $relatorio = chamados("relatorio");
         </select>
         <button type="submit">Atualizar</button>
     </form>
-        
-    
-    
-    
+    <form method="POST">
+        <input type="hidden" name="acao" value="excluir">
+        <input type="hidden" name="posicao" value="<?= $posicao ?>">
+        <button type="submit">Excluir</button>
+    </form>
+    <hr>
     <?php } ?>
 </body>
 </html>
