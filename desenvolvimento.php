@@ -32,8 +32,9 @@
 
     <div class="desenvolver">
         <h1>Nome do projeto</h1>
-        <p> em andamento </p>
-        <p> prazo de entrega </p>
+        <p> dados do projeto </p>
+        <p> status: </p>
+        <p> previsão de entrega </p>
 
 
     </div>
