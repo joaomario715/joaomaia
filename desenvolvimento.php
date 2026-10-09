@@ -49,6 +49,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <a href="#">DESENVOLVIMENTO</a>
     </div><!--Nav-bar-->
 
+     <h1>CADASTRO DE PROJETOS</h1>
+
+    <form method = "POST">
+
+    <label>Nome do projeto:</label>
+    <input type="text" name = "nome" required>
+    <br><br>
+    <label>Dados do projeto:</label>
+    <input type="text" name = "dados" required>
+    <br><br>
+    <label>Status do projeto:</label>
+    <input type="text" name = "status" required>
+    <br><br>
+    <label>Prazo para conclusão:</label>
+    <input type="number" name = "prazo" required>
+    <br><br>
+
     <div class="desenvolver">
         <h1><?= $nome ?></h1>
         <p><?= $dados ?></p>
