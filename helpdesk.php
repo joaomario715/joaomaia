@@ -69,5 +69,36 @@ $relatorio = chamados("relatorio");
     <br><br>
     <button type = "submmit">Cadastrar</button>
     </form>
+    <hr>
+    <h2>RELATÓRIO</h2>
+    <P>Total: <?= count($lista) ?></P>
+    <p>Abertos: <?= $relatorio[0] ?></p>
+    <p>Em andamento: <?= $relatorio[1] ?></p>
+    <p>Resolvidos: <?= $relatorio[2] ?></p>
+    <hr>
+    <h2>Lista de chamados</h2>
+    <?php foreach ($lista as $posicao => $chamado) { ?>
+    <h3>Chamado <?= $posicao + 1 ?></h3>
+    <p>Nome: <?= $chamado["nome"] ?></p>
+    <p>Setor: <?= $chamado["setor"] ?></p>
+    <p>Equipamento: <?= $chamado["equipamento"] ?></p>
+    <p>Descrição: <?= $chamado["descricao"] ?></p>
+    <p>Prioridade: <?= $chamado["prioridade"] ?></p>
+    <p>Status: <?= $chamado["status"] ?></p>
+    <form method="POST">
+        <input type="hidden" name="acao" value="atualizar">
+        <input type="hidden" name="posicao" value="<?= $posicao ?>">
+        <select name="status">
+            <option>Aberto</option>
+            <option>Em andamento</option>
+            <option>Resolvido</option>
+        </select>
+        <button type="submit">Atualizar</button>
+    </form>
+        
+    
+    
+    
+    <?php } ?>
 </body>
 </html>
