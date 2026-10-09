@@ -50,10 +50,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div><!--Nav-bar-->
 
     <div class="desenvolver">
-        <h1>Nome do projeto</h1>
-        <p> dados do projeto </p>
-        <p> status: </p>
-        <p> previsão de entrega </p>
+        <h1><?= $nome ?></h1>
+        <p><?= $dados ?></p>
+        <p><?= $status ?></p>
+        <p><?= $prazo ?></p>
 
 
     </div>
