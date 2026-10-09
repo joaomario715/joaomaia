@@ -40,7 +40,7 @@ body{
     background-color: rgb(25, 37, 41);
     width: 80%;
     max-width: 800px;
-    margin: 40px auto;
+    margin: 40px 0 0 20px;
     padding: 30px;
     border-radius: 8px;
     border: 1px solid #34495e;
