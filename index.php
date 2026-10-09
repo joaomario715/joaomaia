@@ -156,6 +156,22 @@
                     </div>
                     <a href="helpdesk.php">Ver projetos</a>
                 </div>
+                <!-- PROJETO 6 -->
+                <div class="card">
+                    <div class="numero-projeto">
+                        02
+                    </div>
+                    <h3>grupo</h3>
+                    <p>
+                        
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="desenvolvimento.php">Ver projetos</a>
+                </div>
             </div>
           </section>
           <!-- SECAO CONTATO -->
