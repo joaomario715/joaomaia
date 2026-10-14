@@ -1,31 +1,28 @@
 <?php 
 
+$arquivo = __DIR__ . "/orcamento.json";
+
+$orcamentos = [];
+
+if(file_exists($arquivo)){
+    $orcamentos = json_decode(file_get_contents($arquivo), true);
+}
+
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $nome = $_POST["nome"];
-    $dados = $_POST["dados"];
-    $status = $_POST["status"];
-    $prazo = $_POST["prazo"];
 
-    $arquivo = "projetos.json";
+$indice = (int) $_POST["indice"];
+$status = $_POST["status"];
 
-    if(file_exists($arquivo)){
-        $projetos = json_decode(file_get_contents($arquivo), true);
-    } else {
-        $projetos = [];
+if(count($orcamentos) > $indice && $indice >= 0){
+    if($status == "pendente" || $status == "em desenvolvimento" || $status == "concluido"){
+        $orcamentos[$indice]["status"] = $status;
+
+        file_put_contents($arquivo, json_encode($orcamentos, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
     }
+}
 
-    $novoProjeto = [
-        "nome" => $nome,
-        "dados" => $dados,
-        "status" => $status,
-        "prazo" => $prazo
-    ];
-
-    $projetos[] = $novoProjeto;
-
-    file_put_contents($arquivo, json_encode($projetos, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-
-    echo "Projeto adicionado com sucesso";
+$orcamentos = json_decode(file_get_contents($arquivo), true);
     
 }
 ?>
@@ -50,10 +47,34 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div><!--Nav-bar-->
     
     <div class="desenvolver">
-        <h1>Nome do projeto:<?= $nome["nome"] ?></h1>
-        <p>Dados do projeto:<?= $dados["dados"] ?></p>
-        <p>Status do projeto:<?= $status["dados"] ?></p>
-        <p>Prazo de entrega:<?= $prazo["prazo"] ?></p>
+        <h1>PROJETOS EM DESENVOLVIMENTO</h1>
+        <?php if(count($orcamentos) > 0) { ?>
+        <?php foreach($orcamentos as $indice => $projeto) { ?>
+        <div class="projetos">
+            <h2><?= $projeto["nomeProjeto"] ?></h2>
+            <p>Empresa:<?= $projeto["empresa"] ?></p>
+            <p>Responsável:<?= $projeto["responsavel"] ?></p>
+            <p>Descrição:<?= $projeto["projeto"] ?></p>
+            <p>Prazo de entrega:<?= $projeto["prazo"] ?></p>
+            <p>status atual:<?= $projeto["status"] ?? "pendente" ?></p>
+            <form method="POST">
+                <input type="hidden" name="indice" value="<?= $indice ?>">
+                <label>Alterar status</label>
+                <select name="status">
+                    <option value="em desenvolvimento">
+                        Em desenvolvimento
+                    </option>
+                    <option value="concluido">
+                        Concluído
+                    </option>
+                </select>
+                <button type="submit">Salvar status</button>
+            </form>
+        </div>
+        <?php } ?>
+        <?php } else { ?>
+        <p>Nenhum projeto cadastrado</p>
+        <?php } ?>
     </div>
 </body>
 </html>
