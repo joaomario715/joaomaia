@@ -1,36 +1,11 @@
-/* ==============================
-   CONFIGURAÇÕES GERAIS
-============================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --azul: #2563eb;
-    --azul-escuro: #1d4ed8;
-    --preto: #111111;
-    --preto-claro: #1c1c1c;
-    --cinza-fundo: #e5e7eb;
-    --cinza-card: #f9fafb;
-    --cinza-borda: #d1d5db;
-    --cinza-texto: #6b7280;
-    --branco: #ffffff;
-}
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--cinza-fundo);
-    color: var(--preto);
-    min-height: 100vh;
+    background-color: #100d14;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
-/* ==============================
-   MENU DE NAVEGAÇÃO
-============================== */
-
+/* Menu */
 .Nav-bar{
     background-color: rgb(25, 37, 41);
     width: 100%;
@@ -59,209 +34,49 @@ body {
     height: 200px;
     margin-left: -80px;
 }
-/* ==============================
-   ÁREA PRINCIPAL
-============================== */
 
+/* Projetos */
 .desenvolver {
     width: 90%;
-    max-width: 1200px;
-    margin: 45px auto;
-    padding-bottom: 40px;
+    margin: 40px auto;
 }
 
 .desenvolver h1 {
-    color: var(--preto);
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 35px;
-    padding-bottom: 18px;
-    border-bottom: 3px solid var(--azul);
+    color: #00d9ff;
+    margin-bottom: 30px;
 }
-
-/* ==============================
-   CARDS DOS PROJETOS
-============================== */
 
 .projetos {
-    background-color: var(--cinza-card);
-    padding: 28px;
-    margin-bottom: 25px;
+    background-color: #211b25;
+    padding: 20px;
+    margin-bottom: 20px;
     border-radius: 10px;
-    border: 1px solid var(--cinza-borda);
-    border-left: 5px solid var(--azul);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: 0.3s ease;
 }
-
-.projetos:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
-    border-left-color: var(--azul-escuro);
-}
-
-/* Título do projeto */
 
 .projetos h2 {
-    color: var(--preto);
-    font-size: 23px;
-    margin-bottom: 20px;
-    overflow-wrap: anywhere;
+    color: #315bff;
 }
-
-/* Informações */
 
 .projetos p {
-    color: #374151;
-    font-size: 15px;
-    line-height: 1.8;
-    margin-bottom: 8px;
-    overflow-wrap: anywhere;
+    color: #dddddd;
 }
 
-/* ==============================
-   FORMULÁRIO
-============================== */
-
-.projetos form {
-    margin-top: 22px;
-    padding-top: 20px;
-    border-top: 1px solid var(--cinza-borda);
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.projetos label {
-    width: 100%;
-    color: var(--preto);
-    font-size: 14px;
-    font-weight: bold;
-}
-
-/* Seleção de status */
-
+/* Status */
 .projetos select {
-    flex: 1;
-    min-width: 180px;
-    padding: 12px;
-    background-color: var(--branco);
-    color: var(--preto);
-    border: 1px solid #9ca3af;
-    border-radius: 6px;
-    font-size: 14px;
-    outline: none;
-    cursor: pointer;
-    transition: 0.3s;
+    background-color: #211b25;
+    color: white;
+    padding: 8px;
+    border: 1px solid #315bff;
 }
-
-.projetos select:focus {
-    border-color: var(--azul);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-}
-
-/* Botão */
 
 .projetos button {
-    padding: 12px 20px;
-    background-color: var(--azul);
-    color: var(--branco);
+    background-color: #168cff;
+    color: white;
+    padding: 10px;
     border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: bold;
     cursor: pointer;
-    transition: 0.3s ease;
 }
 
 .projetos button:hover {
-    background-color: var(--azul-escuro);
-    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
-}
-
-.projetos button:active {
-    transform: scale(0.98);
-}
-
-/* ==============================
-   MENSAGEM SEM PROJETOS
-============================== */
-
-.desenvolver > p {
-    background-color: var(--cinza-card);
-    color: var(--cinza-texto);
-    padding: 30px;
-    text-align: center;
-    font-size: 16px;
-    border: 1px solid var(--cinza-borda);
-    border-radius: 8px;
-}
-
-/* ==============================
-   RESPONSIVIDADE
-============================== */
-
-@media (max-width: 768px) {
-    .Nav-bar {
-        justify-content: center;
-        padding: 15px;
-        gap: 8px;
-    }
-
-    .Nav-bar img {
-        width: 65px;
-        height: 50px;
-    }
-
-    .Nav-bar a {
-        font-size: 12px;
-        padding: 9px;
-    }
-
-    .desenvolver {
-        width: 92%;
-        margin: 30px auto;
-    }
-
-    .desenvolver h1 {
-        font-size: 24px;
-    }
-
-    .projetos {
-        padding: 20px;
-    }
-
-    .projetos h2 {
-        font-size: 20px;
-    }
-
-    .projetos form {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .projetos select,
-    .projetos button {
-        width: 100%;
-    }
-}
-
-@media (max-width: 400px) {
-    .Nav-bar a {
-        font-size: 11px;
-        padding: 8px;
-    }
-
-    .desenvolver h1 {
-        font-size: 21px;
-    }
-
-    .projetos {
-        padding: 16px;
-    }
-
-    .projetos p {
-        font-size: 14px;
-    }
+    background-color: #315bff;
 }
