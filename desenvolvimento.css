@@ -1,65 +1,274 @@
-body{
-    background-color: black;
-    overflow-x: hidden;
-    width: 100%;
-}
-/* nav bar*/ 
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+============================== */
 
-.Nav-bar{
-    background-color: rgb(25, 37, 41);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul: #2563eb;
+    --azul-escuro: #1d4ed8;
+    --preto: #111111;
+    --preto-claro: #1c1c1c;
+    --cinza-fundo: #e5e7eb;
+    --cinza-card: #f9fafb;
+    --cinza-borda: #d1d5db;
+    --cinza-texto: #6b7280;
+    --branco: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cinza-fundo);
+    color: var(--preto);
+    min-height: 100vh;
+}
+
+/* ==============================
+   MENU DE NAVEGAÇÃO
+============================== */
+
+.Nav-bar {
     width: 100%;
-    height: 50px;
-    margin-top: 0;
-    color: white;
-    padding: 10px 0 ;
-    align-items: center;
-    text-align: center;
+    min-height: 85px;
+    background-color: var(--preto);
     display: flex;
+    align-items: center;
     justify-content: space-around;
-    gap: 30px;
-    
+    padding: 15px 30px;
+    gap: 15px;
+    flex-wrap: wrap;
+    border-bottom: 3px solid var(--azul);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-.Nav-bar a{
-    color: white;
-    text-decoration: none; 
+.Nav-bar img {
+    width: 75px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.Nav-bar a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 13px;
     font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.Nav-bar img
-{
-    object-fit: cover;
-    width: 300px;
-    height: 200px;
-    margin-left: -80px;
+    padding: 12px 14px;
+    border-radius: 6px;
+    transition: 0.3s ease;
 }
 
-/* final nav bar */
-
-.desenvolver{
-    background-color: rgb(25, 37, 41);
-    width: 80%;
-    max-width: 800px;
-    margin: 40px 0 0 20px;
-    padding: 30px;
-    border-radius: 8px;
-    border: 1px solid rgb(0, 4, 255);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+.Nav-bar a:hover {
+    color: var(--branco);
+    background-color: var(--azul);
 }
 
-.desenvolver h1{
-    color: rgb(0, 4, 255);
-    font-size: 28px;
+/* ==============================
+   ÁREA PRINCIPAL
+============================== */
+
+.desenvolver {
+    width: 90%;
+    max-width: 1200px;
+    margin: 45px auto;
+    padding-bottom: 40px;
+}
+
+.desenvolver h1 {
+    color: var(--preto);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 35px;
+    padding-bottom: 18px;
+    border-bottom: 3px solid var(--azul);
+}
+
+/* ==============================
+   CARDS DOS PROJETOS
+============================== */
+
+.projetos {
+    background-color: var(--cinza-card);
+    padding: 28px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border: 1px solid var(--cinza-borda);
+    border-left: 5px solid var(--azul);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.projetos:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+    border-left-color: var(--azul-escuro);
+}
+
+/* Título do projeto */
+
+.projetos h2 {
+    color: var(--preto);
+    font-size: 23px;
     margin-bottom: 20px;
+    overflow-wrap: anywhere;
 }
 
-.desenvolver p{
-    color: #ffffff;
-    font-size: 16px;
-    margin-bottom: 15px;
+/* Informações */
+
+.projetos p {
+    color: #374151;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 8px;
+    overflow-wrap: anywhere;
 }
 
-.desenvolver:hover{
-    border-color: rgb(0, 4, 255);
+/* ==============================
+   FORMULÁRIO
+============================== */
+
+.projetos form {
+    margin-top: 22px;
+    padding-top: 20px;
+    border-top: 1px solid var(--cinza-borda);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.projetos label {
+    width: 100%;
+    color: var(--preto);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Seleção de status */
+
+.projetos select {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px;
+    background-color: var(--branco);
+    color: var(--preto);
+    border: 1px solid #9ca3af;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
     transition: 0.3s;
+}
+
+.projetos select:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Botão */
+
+.projetos button {
+    padding: 12px 20px;
+    background-color: var(--azul);
+    color: var(--branco);
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.projetos button:hover {
+    background-color: var(--azul-escuro);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+.projetos button:active {
+    transform: scale(0.98);
+}
+
+/* ==============================
+   MENSAGEM SEM PROJETOS
+============================== */
+
+.desenvolver > p {
+    background-color: var(--cinza-card);
+    color: var(--cinza-texto);
+    padding: 30px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 8px;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (max-width: 768px) {
+    .Nav-bar {
+        justify-content: center;
+        padding: 15px;
+        gap: 8px;
+    }
+
+    .Nav-bar img {
+        width: 65px;
+        height: 50px;
+    }
+
+    .Nav-bar a {
+        font-size: 12px;
+        padding: 9px;
+    }
+
+    .desenvolver {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    .desenvolver h1 {
+        font-size: 24px;
+    }
+
+    .projetos {
+        padding: 20px;
+    }
+
+    .projetos h2 {
+        font-size: 20px;
+    }
+
+    .projetos form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .projetos select,
+    .projetos button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .Nav-bar a {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    .desenvolver h1 {
+        font-size: 21px;
+    }
+
+    .projetos {
+        padding: 16px;
+    }
+
+    .projetos p {
+        font-size: 14px;
+    }
 }
