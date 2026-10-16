@@ -31,41 +31,34 @@ body {
    MENU DE NAVEGAÇÃO
 ============================== */
 
-.Nav-bar {
+.Nav-bar{
+    background-color: rgb(25, 37, 41);
     width: 100%;
-    min-height: 85px;
-    background-color: var(--preto);
-    display: flex;
+    height: 50px;
+    margin-top: 0;
+    color: white;
+    padding: 10px 0 ;
     align-items: center;
+    text-align: center;
+    display: flex;
     justify-content: space-around;
-    padding: 15px 30px;
-    gap: 15px;
-    flex-wrap: wrap;
-    border-bottom: 3px solid var(--azul);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    gap: 30px;
+    
 }
 
-.Nav-bar img {
-    width: 75px;
-    height: 60px;
-    object-fit: contain;
-}
-
-.Nav-bar a {
-    color: var(--branco);
-    text-decoration: none;
-    font-size: 13px;
+.Nav-bar a{
+    color: white;
+    text-decoration: none; 
     font-weight: bold;
-    padding: 12px 14px;
-    border-radius: 6px;
-    transition: 0.3s ease;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
-.Nav-bar a:hover {
-    color: var(--branco);
-    background-color: var(--azul);
+.Nav-bar img
+{
+    object-fit: cover;
+    width: 300px;
+    height: 200px;
+    margin-left: -80px;
 }
-
 /* ==============================
    ÁREA PRINCIPAL
 ============================== */
