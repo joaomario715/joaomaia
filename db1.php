@@ -34,6 +34,33 @@ if (isset($_POST["atualizar"])) {
     $stmt->execute();
 }
 
+// EXCLUIR
+if (isset($_POST["excluir"])) {
+    $id = $_POST["id"];
+
+    $sql = "DELETE FROM produtos WHERE id = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$id]);
+}
+
+// EDITAR
+$produtoEditar = null;
+
+if (isset($_GET["editar"])) {
+    $id = $_GET["editar"];
+
+    $sql = "SELECT * FROM produtos WHERE id = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$id]);
+
+    $produtoEditar = $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+// LISTAR PRODUTOS
+$sql = "SELECT * FROM produtos";
+$stmt = $pdo->query($sql);
+$produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 
 ?>
 
