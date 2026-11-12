@@ -1,4 +1,38 @@
 <?php
+require_once "../conexao.php";
+
+$sql = "CREATE TABLE IF NOT EXISTS produtos (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+preco DECIMAL(10,2) NOT NULL,
+quantidade INT NOT NULL)";
+
+$pdo->exec($sql);
+
+if (isset($_POST["cadastrar"])) {
+    $nome = $_POST["nome"];
+    $preco = $_POST["preco"];
+    $quantidade = $_POST["quantidade"];
+
+    $sql = "INSERT INTO produtos (nome, preco, quantidade) VALUES ('$nome', $preco, $quantidade)";
+
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->execute();
+}
+
+if (isset($_POST["atualizar"])) {
+    $id = $_POST["id"];
+    $nome = $_POST["nome"];
+    $preco = $_POST["preco"];
+    $quantidade = $_POST["quantidade"];
+
+     $sql = "UPDATE produtos SET nome = '$nome', preco = $preco, quantidade = $quantidade WHERE id = $id";
+
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->execute();
+}
 
 
 ?>
@@ -62,6 +96,11 @@
                     <td>R$ <?= number_format($produto["preco"], 2, ",", ".") ?></td>
                     <td><?= $produto["quantidade"] ?></td>
                 </tr>
+                <a href="db1.php?editar=<?= $produto['id'] ?>">Editar</a>
+                <form method="POST" action="db1.php" style="display:inline">
+                    <input type="hidden" name="id" value="<?= $produto['id'] ?>">
+                    <button type="submit" name="excluir" onclick="return confirm('Deseja excluir este produto?')">
+                </form>
                 <?php } ?>
             </table>
 </body>
