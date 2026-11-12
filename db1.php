@@ -38,9 +38,9 @@ if (isset($_POST["atualizar"])) {
 if (isset($_POST["excluir"])) {
     $id = $_POST["id"];
 
-    $sql = "DELETE FROM produtos WHERE id = ?";
+    $sql = "DELETE FROM produtos WHERE id = $id";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$id]);
+    $stmt->execute();
 }
 
 // EDITAR
@@ -49,9 +49,9 @@ $produtoEditar = null;
 if (isset($_GET["editar"])) {
     $id = $_GET["editar"];
 
-    $sql = "SELECT * FROM produtos WHERE id = ?";
+    $sql = "SELECT * FROM produtos WHERE id = $id";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$id]);
+    $stmt->execute();
 
     $produtoEditar = $stmt->fetch(PDO::FETCH_ASSOC);
 }
