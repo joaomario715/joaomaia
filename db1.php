@@ -27,7 +27,7 @@ if (isset($_POST["atualizar"])) {
     $preco = $_POST["preco"];
     $quantidade = $_POST["quantidade"];
 
-     $sql = "UPDATE produtos SET nome = '$nome', preco = $preco, quantidade = $quantidade WHERE id = $id";
+    $sql = "UPDATE produtos SET nome = '$nome', preco = $preco, quantidade = $quantidade WHERE id = $id";
 
     $stmt = $pdo->prepare($sql);
 
@@ -115,19 +115,21 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <th>QUANTIDADE</th>
                     <th>AÇÕES</th>
                 </tr>
-                <?php foreach ($produtos as $produto){ ?>
-                <tr>
-                    <!-- td cria uma celula de dados na tabela-->
+                <?php foreach ($produtos as $produto) { ?>
+                    <td>
+                        <!-- td cria uma celula de dados na tabela-->
                     <td> <?= $produto["id"] ?></td>
                     <td><?= htmlspecialchars($produto["nome"]) ?></td>
                     <td>R$ <?= number_format($produto["preco"], 2, ",", ".") ?></td>
                     <td><?= $produto["quantidade"] ?></td>
-                </tr>
-                <a href="db1.php?editar=<?= $produto['id'] ?>">Editar</a>
-                <form method="POST" action="db1.php" style="display:inline">
-                    <input type="hidden" name="id" value="<?= $produto['id'] ?>">
-                    <button type="submit" name="excluir" onclick="return confirm('Deseja excluir este produto?')">
-                </form>
+                    </td>
+                    <td>
+                        <a href="db1.php?editar=<?= $produto['id'] ?>">Editar</a>
+                        <form method="POST" action="db1.php" style="display:inline">
+                            <input type="hidden" name="id" value="<?= $produto['id'] ?>">
+                            <button type="submit" name="excluir" onclick="return confirm('Deseja excluir este produto?')">Excluir</button>
+                        </form>
+                    </td>
                 <?php } ?>
             </table>
 </body>
