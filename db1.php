@@ -83,8 +83,7 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
             echo "cadastrar produto";
         }
         ?>
-        <h2>
-
+        </h2>
             <form method="POST">
                 <?php if ($produtoEditar) { ?>
                     <input type="hidden" name="id" value="<?= $produtoEditar['id'] ?>">
@@ -116,7 +115,7 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <th>AÇÕES</th>
                 </tr>
                 <?php foreach ($produtos as $produto) { ?>
-                    <td>
+                    <tr>
                         <!-- td cria uma celula de dados na tabela-->
                     <td> <?= $produto["id"] ?></td>
                     <td><?= htmlspecialchars($produto["nome"]) ?></td>
@@ -130,6 +129,7 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <button type="submit" name="excluir" onclick="return confirm('Deseja excluir este produto?')">Excluir</button>
                         </form>
                     </td>
+                    </tr>
                 <?php } ?>
             </table>
 </body>
