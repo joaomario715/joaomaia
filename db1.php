@@ -1,5 +1,5 @@
 <?php
-require_once "../conexao.php";
+require_once "/conexao.php";
 
 $sql = "CREATE TABLE IF NOT EXISTS produtos (
 id INT AUTO_INCREMENT PRIMARY KEY,
